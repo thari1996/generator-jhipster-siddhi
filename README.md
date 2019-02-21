@@ -1,5 +1,9 @@
 
 # generator-jhipster-siddhi
+<<<<<<< HEAD
+=======
+ [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] 
+>>>>>>> test
 
 > JHipster module, additional [Siddhi](https://github.com/wso2/siddhi/) support in your JHipster application
 
@@ -39,11 +43,26 @@ Due to a limitation of yeoman about file override, you will have to accept the o
 ? Overwrite package.json? (Ynaxdh)
 ```
 
+<<<<<<< HEAD
 Enjoy siddhi in your Spring boot application
+=======
+Enjoy WSO2 siddhi in your Spring boot application
+>>>>>>> test
 
 ```bash
 npm run doc
 ```
 
 # License
+<<<<<<< HEAD
+=======
+Apache-2.0 © [Xiges Solutions](mailto:sales@xiges.io)
+
+[npm-image]: https://img.shields.io/npm/v/generator-jhipster-siddhi.svg
+[npm-url]: https://npmjs.org/package/generator-jhipster-siddhi
+[travis-image]: https://travis-ci.org/thari1996/generator-jhipster-siddhi.svg?branch=test
+[travis-url]: https://travis-ci.org/thari1996/generator-jhipster-siddhi
+[daviddm-image]: https://david-dm.org/thari1996/generator-jhipster-siddhi.svg
+[daviddm-url]: https://david-dm.org/thari1996/generator-jhipster-module
+>>>>>>> test
 
