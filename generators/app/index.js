@@ -3,7 +3,11 @@ const generator = require('yeoman-generator');
 const packagejs = require('../../package.json');
 
 // Stores JHipster variables
+<<<<<<< HEAD
+const jhipsterVar = { moduleName: 'siddhiX' };
+=======
 const jhipsterVar = { moduleName: 'siddhi' };
+>>>>>>> test
 
 // Stores JHipster functions
 const jhipsterFunc = {};
@@ -19,7 +23,11 @@ module.exports = generator.extend({
         },
         displayLogo() {
             // Have Yeoman greet the user.
+<<<<<<< HEAD
+            this.log(`Welcome to the ${chalk.bold.yellow('JHipster siddhi')} generator! ${chalk.yellow(`v${packagejs.version}\n`)}`);
+=======
             this.log(`Welcome to the ${chalk.bold.yellow('WSO2 Siddhi')} generator! ${chalk.yellow(`v${packagejs.version}\n`)}`);
+>>>>>>> test
         }
     },
 
@@ -27,16 +35,28 @@ module.exports = generator.extend({
         // return the function to call once the task is done
         const done = this.async();
 
+<<<<<<< HEAD
+
+        const prompts = [
+            {
+                type: 'input',
+                name: 'userFortune',
+                message: 'Please write your own fortune cookie',
+=======
         const prompts = [
             {
                 type: 'input',
                 name: 'userSiddhi',
                 message: 'Please write your own Siddhi app',
+>>>>>>> test
                 default: 'Do. Or do not. There is no try.'
             }
         ];
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> test
         this.prompt(prompts).then((props) => {
             this.props = props;
             // To access props later use this.props.someOption;
@@ -67,6 +87,38 @@ module.exports = generator.extend({
 
 
 
+<<<<<<< HEAD
+        this.template('src/main/java/package/domain/_RealtimeAnalytics.java', `${javaDir}domain/RealtimeAnalytics.java`);
+        this.template('src/main/java/package/domain/_RealtimeAnalyticsService.java', `${javaDir}domain/RealtimeAnalyticsService.java`);
+        this.template('src/main/java/package/domain/_StockData.java', `${javaDir}domain/StockData.java`);
+
+        this.template('src/main/java/package/web/rest/_StockDataResource.java', `${javaDir}web/rest/StockDataResource.java`);
+    },
+
+    install() {
+        let logMsg =
+            `To install your dependencies manually, run: ${chalk.yellow.bold(`${this.clientPackageManager} install`)}`;
+
+        if (this.clientFramework === 'angular1') {
+            logMsg =
+                `To install your dependencies manually, run: ${chalk.yellow.bold(`${this.clientPackageManager} install & bower install`)}`;
+        }
+        const injectDependenciesAndConstants = (err) => {
+            if (err) {
+                this.warning('Install of dependencies failed!');
+                this.log(logMsg);
+            } else if (this.clientFramework === 'angular1') {
+                this.spawnCommand('gulp', ['install']);
+            }
+        };
+        const installConfig = {
+            bower: this.clientFramework === 'angular1',
+            npm: this.clientPackageManager !== 'yarn',
+            yarn: this.clientPackageManager === 'yarn',
+            callback: injectDependenciesAndConstants
+        };
+        this.installDependencies(installConfig);
+=======
         this.template('src/main/java/package/domain/_RealtimeAnalyticsServiceImpl.java', `${javaDir}domain/RealtimeAnalyticsServiceImpl.java`);
         this.template('src/main/java/package/domain/_RealtimeAnalyticsService.java', `${javaDir}domain/RealtimeAnalyticsService.java`);
         this.template('src/main/java/package/domain/_TemperatureData.java', `${javaDir}domain/TemperatureData.java`);
@@ -75,6 +127,7 @@ module.exports = generator.extend({
     },
 
     install() {
+>>>>>>> test
 
 
         this.addMavenDependency('org.wso2.siddhi', 'siddhi-query-api', '4.1.7');
@@ -84,6 +137,10 @@ module.exports = generator.extend({
     },
 
     end() {
+<<<<<<< HEAD
+        this.log('End of Siddhi generator');
+=======
         this.log('End of WSO2 Siddhi generator');
+>>>>>>> test
     }
 });
